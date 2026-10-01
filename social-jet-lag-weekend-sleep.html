@@ -3,6 +3,7 @@
 <head>
 <!-- This page must be linked from the footer of every page on circadianhub.com to comply with Google AdSense policies. -->
 <meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-5810682779564104">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>">
 <title>Social Jet Lag: Why Weekend Sleep-Ins Make Monday Harder | CircadianHub</title>
@@ -200,8 +201,10 @@ document.querySelectorAll('.sw').forEach(b => b.addEventListener('click', () => 
 
 /* ===== ADSENSE PLACEHOLDER: paste your real AdSense code inside this function ===== */
 window.loadAdSense = function(){
-  /* Example: inject the adsbygoogle.js script tag from your AdSense account here (with your ca-pub client ID). */
-  console.log('loadAdSense() called: connect real AdSense code here');
+  if (window.__adsLoaded) return; window.__adsLoaded = true;
+  var s = document.createElement('script'); s.async = true; s.crossOrigin = 'anonymous';
+  s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5810682779564104';
+  document.head.appendChild(s);
 };
 
 /* ===== CONSENT LOGIC ===== */
